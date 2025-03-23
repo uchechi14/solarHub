@@ -1,0 +1,26 @@
+import React from "react";
+
+const Power = () => {
+  return (
+    <div className="w-full flex justify-center py-10">
+      <div className="w-[90%] flex flex-col items-center gap-3 ">
+        <p className="font-semibold font-sora text-[#101828] text-4xl md:text-5xl text-center">
+          Get unique power
+        </p>
+        <p className="text-[#101828] text-xl text-center md:w-[30%]">
+          We’re your number one solution to solar power need!
+        </p>
+        <div className="flex gap-3">
+          <button className="bg-[#101828] text-white py-2.5 px-[1.5rem] text-sm rounded-sm ">
+            GET STARTED
+          </button>
+          <button className="text-[#101828] border border-[#101828] bg-white py-2.5 px-[1.5rem] text-sm rounded-sm ">
+            Contact us
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Power;
