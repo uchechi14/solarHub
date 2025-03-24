@@ -1,4 +1,5 @@
 import React from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 const Power = () => {
   return (
@@ -11,8 +12,8 @@ const Power = () => {
           We’re your number one solution to solar power need!
         </p>
         <div className="flex gap-3">
-          <button className="bg-[#101828] text-white py-2.5 px-[1.5rem] text-sm rounded-sm ">
-            GET STARTED
+          <button className="bg-[#101828] flex items-center gap-1.5 text-white py-2.5 px-[1.5rem] text-sm rounded-sm ">
+            GET STARTED <FaArrowRight />
           </button>
           <button className="text-[#101828] border border-[#101828] bg-white py-2.5 px-[1.5rem] text-sm rounded-sm ">
             Contact us

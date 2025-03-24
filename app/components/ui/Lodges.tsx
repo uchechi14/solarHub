@@ -3,6 +3,7 @@ import Image from "next/image";
 import image1 from "../../../public/images/image1.svg";
 import image2 from "../../../public/images/image2.svg";
 import image3 from "../../../public/images/image3.svg";
+import { FaArrowRight } from "react-icons/fa";
 
 const Lodges = () => {
   const LodgesImage = [
@@ -67,7 +68,9 @@ const Lodges = () => {
                 We recently completed a full package installation for express
                 lodge
               </p>
-              <p>Learn more</p>
+              <p className="flex items-center text-sm gap-1.5">
+                Learn more <FaArrowRight />
+              </p>
             </div>
             <div className="text-white flex flex-col gap-2 md:items-start items-center">
               <p className="text-2xl">Exclusive Lodge </p>
@@ -75,7 +78,9 @@ const Lodges = () => {
                 We recently completed a full package installation for exclusive
                 lodge
               </p>
-              <p>Learn more</p>
+              <p className="flex items-center text-sm gap-1.5">
+                Learn more <FaArrowRight />
+              </p>
             </div>
             <div className="text-white flex flex-col gap-2 md:items-start items-center">
               <p className="text-2xl">Premium Lodge</p>
@@ -83,7 +88,9 @@ const Lodges = () => {
                 We recently completed a full package installation for premium
                 lodge
               </p>
-              <p>Learn more</p>
+              <p className="flex items-center text-sm gap-1.5">
+                Learn more <FaArrowRight />
+              </p>
             </div>
           </div>
         </div>

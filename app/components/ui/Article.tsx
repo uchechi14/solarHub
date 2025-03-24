@@ -1,14 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import Man from "../../../public/images/man.svg";
+import { PiStarFourFill } from "react-icons/pi";
 
 const Article = () => {
   return (
     <div className="w-full flex justify-center py-10">
       <div className="w-[90%] flex flex-col gap-5">
         <div className="flex flex-col items-center gap-2">
-          <p className="text-[#101828] bg-[#1018281A] px-9 py-2 rounded-full">
-            Update
+          <p className="text-[#101828] flex items-center gap-1.5 bg-[#1018281A] px-9 py-2 rounded-full">
+            <PiStarFourFill /> Update
           </p>
           <p className="font-bold font-sora text-2xl text-[#101828]">
             Latest articles & innovations

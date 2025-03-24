@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "./ui/Header";
+// import Header from "./ui/Header";
 import WorkingSteps from "./ui/WorkingSteps";
 import Image from "next/image";
 import vector from "../../public/images/Vector.svg";
@@ -9,14 +9,15 @@ import Calculator from "./ui/Calculator";
 import Article from "./ui/Article";
 import CLient from "./ui/CLient";
 import Power from "./ui/Power";
-import Footer from "./ui/Footer";
+// import Footer from "./ui/Footer";
 import Hotels from "./Hotels";
+import { FaArrowRight } from "react-icons/fa";
 // import { rage } from "./utils/Font";
 
 const LandingPage = () => {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <div className="w-full  flex justify-center bg-[url('/images/heroImage.svg')]  h-[88vh] max-h-1/5 bg-cover items-center">
         <div className="w-[90%] flex ">
           <div className="md:w-[70%] flex flex-col gap-5">
@@ -34,8 +35,8 @@ const LandingPage = () => {
               returns on your investment.
             </p>
             <div>
-              <button className="bg-[#101828] text-white border-[1px] border-white py-2.5 px-[1.5rem] text-sm rounded-sm ">
-                Get Started
+              <button className="bg-[#101828] text-white border-[1px] flex items-center gap-1 border-white py-2.5 px-[1.5rem] text-sm rounded-sm ">
+                Get Started <FaArrowRight />
               </button>
             </div>
           </div>
@@ -56,14 +57,14 @@ const LandingPage = () => {
             </p>
           </div>
 
-          <div className="bg-blue-200">
-            <div className="flex gap-3">
-              <p className="text-[#101828]">Fullsolar installation</p>
-              <p className="text-[#101828]">Consultations </p>
-            </div>
-            <div className="flex flex-col md:flex-row md:justify-between gap-5 mt-3">
-              <div className="flex flex-col gap-3 w-full">
-                <div className="flex gap-2 md:w-[70%] ">
+          <div className="">
+            <div className="flex flex-col-reverse md:flex-row md:justify-between gap-5 mt-3">
+              <div className="flex flex-col gap-4 w-full">
+                <div className="flex gap-3">
+                  <p className="text-[#101828]">Fullsolar installation</p>
+                  <p className="text-[#101828]">Consultations </p>
+                </div>
+                <div className="flex gap-2 md:w-[80%] ">
                   <div className="size-[20px]">
                     <Image src={vector} alt="vector" className="size-full" />
                   </div>
@@ -73,7 +74,7 @@ const LandingPage = () => {
                     condition, orientation and shading
                   </p>
                 </div>
-                <div className="flex gap-2 md:w-[70%]">
+                <div className="flex gap-2 md:w-[80%]">
                   <div className="size-[20px]">
                     <Image src={vector} alt="vector" className="size-full" />
                   </div>
@@ -83,7 +84,7 @@ const LandingPage = () => {
                     includes selecting the right number of solar panels
                   </p>
                 </div>
-                <div className="flex gap-2 md:w-[70%]">
+                <div className="flex gap-2 md:w-[80%]">
                   <div className="size-[20px]">
                     <Image src={vector} alt="vector" className="size-full" />
                   </div>
@@ -93,7 +94,7 @@ const LandingPage = () => {
                     incentives, and potential savings
                   </p>
                 </div>
-                <div className="flex gap-2 md:w-[70%]">
+                <div className="flex gap-2 md:w-[80%]">
                   <div className="size-[20px]">
                     <Image src={vector} alt="vector" className="size-[15px]" />
                   </div>
@@ -103,7 +104,7 @@ const LandingPage = () => {
                     panels are carefully mounted onto the racking system.
                   </p>
                 </div>
-                <div className="flex gap-2 md:w-[70%]">
+                <div className="flex gap-2 md:w-[80%]">
                   <div className="size-[20px]">
                     <Image src={vector} alt="vector" className="size-full" />
                   </div>
@@ -113,14 +114,18 @@ const LandingPage = () => {
                     condition, orientation and shading
                   </p>
                 </div>
-                <div>
-                  <button className="bg-[#101828] text-white py-2.5 px-[1.5rem] text-sm rounded-sm ">
-                    GET STARTED
+                <div className="flex justify-center md:justify-normal">
+                  <button className="bg-[#101828] flex items-center gap-1 text-white py-3 shadow px-[1.5rem] text-sm rounded-sm ">
+                    GET STARTED <FaArrowRight />
                   </button>
                 </div>
               </div>
               <div className="w-full ">
-                <Image src={background} alt="" className="object-cover" />
+                <Image
+                  src={background}
+                  alt=""
+                  className="object-cover w-full"
+                />
               </div>
             </div>
           </div>
@@ -132,7 +137,7 @@ const LandingPage = () => {
       <Article />
       <CLient />
       <Power />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

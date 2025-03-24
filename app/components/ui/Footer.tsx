@@ -38,7 +38,7 @@ const Footer = () => {
           </p>
           <div className="grid sm:grid-cols-2 grid-cols-1 gap-3 mt-2">
             <input
-              className="px-5 border border-[#D0D5DD] text-xs outline-none rounded-sm text-[#667085] shadow py-1.5"
+              className="px-5 border border-[#D0D5DD] text-xs outline-none rounded-sm text-[#667085] shadow py-2.5"
               placeholder="Enter your email"
             />
             <button className="bg-[#101828] text-white py-2.5 px-[1.5rem] text-sm rounded-sm shadow ">
