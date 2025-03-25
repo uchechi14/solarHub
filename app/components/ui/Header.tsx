@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 // import React, { useEffect, useState } from "react";
 
 import { IoMenu } from "react-icons/io5";
@@ -10,20 +10,25 @@ const Header = () => {
   const pathname = usePathname();
   const navItems = [
     { name: " HOME", href: "/" },
-    { name: "ABOUT US", href: "/about" },
-    { name: " SERVICES", href: "/renderService" },
+    { name: "ABOUT US", href: "/aboutUs" },
+    { name: " SERVICES", href: "/serve" },
     { name: " OUR NEWS", href: "/contact" },
   ];
 
   const [sideOpen, setSideOpen] = useState<boolean>(false);
+  const [start_anime, setstart_anime] = useState(false);
 
   const menuOpen = () => {
-    setSideOpen(!sideOpen);
+    setSideOpen(true);
+
+    setTimeout(() => {
+      setstart_anime(true);
+    }, 10);
   };
-  const [start_anime, setstart_anime] = useState(false);
-  useEffect(() => {
-    setstart_anime(true);
-  }, []);
+
+  // useEffect(() => {
+  //   setstart_anime(true);
+  // }, 10);
 
   const handle_close = () => {
     setstart_anime(false);
@@ -88,7 +93,7 @@ const Header = () => {
           // className={`  ${
           //   start_anime ? "bg-opacity-70" : "bg-opacity-0"
           // } fixed top-0 left-0 h-[100vh] bg-red-300 w-full z-[10] lg:hidden`}
-          className={`h-[100vh] left-0 fixed  top-0 w-full z-[1000] flex md:hidden bg-black ${
+          className={`h-[100vh] left-0 fixed  top-0 w-full z-[1000] flex md:hidden bg-[#10182833] ${
             start_anime ? "bg-opacity-70" : "bg-opacity-0"
           }`}
         >

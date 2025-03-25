@@ -21,9 +21,18 @@ export const sora = localFont({
 export const soraBold = localFont({
   src: [
     {
-      path: "../../public/fonts/Sora/Sora-Bold.ttf",
+      path: "../../public/fonts/Sora/Sora-SemiBold.ttf",
       weight: "700",
     },
   ],
   variable: "--soraB",
+});
+export const soraThin = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Sora/Sora-Light.ttf",
+      weight: "700",
+    },
+  ],
+  variable: "--soraT",
 });

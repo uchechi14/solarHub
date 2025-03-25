@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 // import Header from "./ui/Header";
 import WorkingSteps from "./ui/WorkingSteps";
 import Image from "next/image";
@@ -15,9 +16,25 @@ import { FaArrowRight } from "react-icons/fa";
 // import { rage } from "./utils/Font";
 
 const LandingPage = () => {
+  const [activeTab, setActiveTab] = useState<string>("FullSolar");
+
+  const handleTab = (tab: string) => {
+    setActiveTab(tab);
+  };
+
+  const getShowArchived = () => {
+    switch (activeTab) {
+      case "FullSolar":
+        return true;
+      case "Consulte":
+        return false;
+      default:
+        return false;
+    }
+  };
+
   return (
     <div>
-      {/* <Header /> */}
       <div className="w-full  flex justify-center bg-[url('/images/heroImage.svg')]  h-[88vh] max-h-1/5 bg-cover items-center">
         <div className="w-[90%] flex ">
           <div className="md:w-[70%] flex flex-col gap-5">
@@ -58,73 +75,104 @@ const LandingPage = () => {
           </div>
 
           <div className="">
-            <div className="flex flex-col-reverse md:flex-row md:justify-between gap-5 mt-3">
+            <div className="flex flex-col-reverse md:flex-row items-center md:justify-between gap-5 mt-3">
               <div className="flex flex-col gap-4 w-full">
-                <div className="flex gap-3">
-                  <p className="text-[#101828]">Fullsolar installation</p>
-                  <p className="text-[#101828]">Consultations </p>
-                </div>
-                <div className="flex gap-2 md:w-[80%] ">
-                  <div className="size-[20px]">
-                    <Image src={vector} alt="vector" className="size-full" />
-                  </div>
-                  <p className="text-[#101828] ">
-                    Initial assessment and consultation: Our professional
-                    installer will assess your property, including roof
-                    condition, orientation and shading
+                <div className="flex gap-10 ">
+                  <p
+                    className={`cursor-pointer text-lg ${
+                      activeTab === "FullSolar"
+                        ? "text-[#101828] pb-1 border-b border-[#101828]"
+                        : "text-[#5F6C82]"
+                    }`}
+                    onClick={() => handleTab("FullSolar")}
+                  >
+                    Fullsolar installation
+                  </p>
+                  <p
+                    className={`cursor-pointer text-lg ${
+                      activeTab === "Consulte"
+                        ? "text-[#101828] pb-1 border-b border-[#101828]"
+                        : "text-[#5F6C82]"
+                    }`}
+                    onClick={() => handleTab("Consulte")}
+                  >
+                    Consultations
                   </p>
                 </div>
-                <div className="flex gap-2 md:w-[80%]">
-                  <div className="size-[20px]">
-                    <Image src={vector} alt="vector" className="size-full" />
-                  </div>
-                  <p className="text-[#101828] ">
-                    System design: Based on assessment, our installer will
-                    design a custom solar system that meets your needs, this
-                    includes selecting the right number of solar panels
-                  </p>
-                </div>
-                <div className="flex gap-2 md:w-[80%]">
-                  <div className="size-[20px]">
-                    <Image src={vector} alt="vector" className="size-full" />
-                  </div>
-                  <p className="text-[#101828] ">
-                    Financial analysis: our installer will provide a detailed
-                    cost estimate and explain available financing options,
-                    incentives, and potential savings
-                  </p>
-                </div>
-                <div className="flex gap-2 md:w-[80%]">
-                  <div className="size-[20px]">
-                    <Image src={vector} alt="vector" className="size-[15px]" />
-                  </div>
-                  <p className="text-[#101828] ">
-                    Mounting system installation: our installer will securely
-                    attach the mounting system to your roof or ground, solar
-                    panels are carefully mounted onto the racking system.
-                  </p>
-                </div>
-                <div className="flex gap-2 md:w-[80%]">
-                  <div className="size-[20px]">
-                    <Image src={vector} alt="vector" className="size-full" />
-                  </div>
-                  <p className="text-[#101828]">
-                    Initial assessment and consultation: Our professional
-                    installer will assess your property, including roof
-                    condition, orientation and shading
-                  </p>
-                </div>
-                <div className="flex justify-center md:justify-normal">
-                  <button className="bg-[#101828] flex items-center gap-1 text-white py-3 shadow px-[1.5rem] text-sm rounded-sm ">
-                    GET STARTED <FaArrowRight />
-                  </button>
-                </div>
+                {/* <div className="border border-[#DEE1E6]"></div> */}
+                {getShowArchived() ? (
+                  <>
+                    <div className="flex gap-2 md:w-[80%] ">
+                      <div className="size-[15px] mt-1 flex-shrink-0">
+                        <Image
+                          src={vector}
+                          alt="vector"
+                          className="size-full  flex-shrink-0"
+                        />
+                      </div>
+                      <p className="text-[#101828]">
+                        Initial assessment and consultation: Our professional
+                        installer will assess your property, including roof
+                        condition, orientation and shading
+                      </p>
+                    </div>
+                    <div className="flex gap-2 md:w-[80%] ">
+                      <div className="size-[15px] mt-1 flex-shrink-0">
+                        <Image
+                          src={vector}
+                          alt="vector"
+                          className="size-full  flex-shrink-0"
+                        />
+                      </div>
+                      <p className="text-[#101828]">
+                        Initial assessment and consultation: Our professional
+                        installer will assess your property, including roof
+                        condition, orientation and shading
+                      </p>
+                    </div>
+                    <div className="flex gap-2 md:w-[80%] ">
+                      <div className="size-[15px] mt-1 flex-shrink-0">
+                        <Image
+                          src={vector}
+                          alt="vector"
+                          className="size-full  flex-shrink-0"
+                        />
+                      </div>
+                      <p className="text-[#101828]">
+                        Initial assessment and consultation: Our professional
+                        installer will assess your property, including roof
+                        condition, orientation and shading
+                      </p>
+                    </div>
+                    <div className="flex gap-2 md:w-[80%] ">
+                      <div className="size-[15px] mt-1 flex-shrink-0">
+                        <Image
+                          src={vector}
+                          alt="vector"
+                          className="size-full  flex-shrink-0"
+                        />
+                      </div>
+                      <p className="text-[#101828]">
+                        Initial assessment and consultation: Our professional
+                        installer will assess your property, including roof
+                        condition, orientation and shading
+                      </p>
+                    </div>
+                    <div className="flex justify-center md:justify-normal">
+                      <button className="bg-[#101828] flex items-center gap-1 text-white py-3 shadow px-[1.5rem] text-sm rounded-sm ">
+                        GET STARTED <FaArrowRight />
+                      </button>
+                    </div>
+                  </>
+                ) : (
+                  <div>THis is it</div>
+                )}
               </div>
               <div className="w-full ">
                 <Image
                   src={background}
                   alt=""
-                  className="object-cover w-full"
+                  className="object-cover w-full "
                 />
               </div>
             </div>

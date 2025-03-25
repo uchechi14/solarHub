@@ -31,5 +31,8 @@ body {
   font-family: "Sora", sora;
 }
 .font-soraBold {
-  font-family: var(--font-sora-bold);
+  font-family: "soraBold", soraBold;
+}
+.font-soraThin {
+  font-family: "soraThin", soraThin;
 }

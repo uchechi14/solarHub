@@ -12,11 +12,11 @@ const CLient = () => {
           </p>
         </div>
         <div className=" relative w-full">
-          <div className="w-full  bg-red-400  rounded-2xl">
+          <div className="w-full  rounded-2xl">
             <Image
               src={girl}
-              alt=""
-              className="w-full bg-white h-fit rounded-2xl"
+              alt="girl"
+              className="w-full bg-white rounded-2xl"
               //   bg-[url('/images/heroImage.svg')]
             />
           </div>
