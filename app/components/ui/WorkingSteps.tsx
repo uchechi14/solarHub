@@ -1,9 +1,12 @@
 import React from "react";
-import { BsBarChart } from "react-icons/bs";
+import { BiBarChartAlt2 } from "react-icons/bi";
+
+import { FiUserPlus, FiZap } from "react-icons/fi";
+import { TiStarOutline } from "react-icons/ti";
 
 const WorkingSteps = () => {
   return (
-    <div className="pb-10 ">
+    <div className="pb-10 md:mt-28 mt-20">
       <div className="w-full flex justify-center py-10">
         <div className="w-[90%] grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="flex flex-col items-center">
@@ -43,18 +46,20 @@ const WorkingSteps = () => {
           </p>
         </div>
         <div className="w-[90%] grid md:grid-cols-2 gap-6 grid-cols-1">
-          <div className="bg-[#F9FAFB] rounded-2xl flex flex-col gap-1.5 items-center py-8">
-            <div className="size-[35px] shadow bg-[#FBBC05] rounded-sm"></div>
+          <div className="bg-[#F9FAFB] rounded-2xl flex flex-col gap-1.5 items-center py-8 transition-transform duration-600 hover:scale-95 ease-in-out">
+            <div className="size-[35px] shadow bg-[#FBBC05] rounded-sm flex justify-center items-center text-white">
+              <BiBarChartAlt2 />
+            </div>
             <p className="font-bold text-[#101828]">Initial Consultation</p>
             <p className="text-center w-[80%] text-[#101828]">
               Discussing your current energy consumption, and assessing your
               property&apos;s suitability for solar panel installation.
             </p>
           </div>
-          <div className="bg-[#F9FAFB] rounded-2xl flex flex-col gap-1.5 items-center py-8">
+          <div className="bg-[#F9FAFB] rounded-2xl flex flex-col gap-1.5 items-center py-8 transition-transform duration-600 hover:scale-95 ease-in-out">
             <div className="size-[35px] shadow bg-[#FBBC05] rounded-sm flex justify-center items-center text-white">
               {" "}
-              <BsBarChart />
+              <FiZap />
             </div>
             <p className="font-bold text-[#101828]">System Design</p>
             <p className="text-center w-[80%] text-[#101828]">
@@ -62,18 +67,22 @@ const WorkingSteps = () => {
               consumption, property orientation
             </p>
           </div>
-          <div className="bg-[#F9FAFB] rounded-2xl flex flex-col gap-1.5 items-center py-8">
-            <div className="size-[35px] shadow bg-[#FBBC05] rounded-sm"></div>
+          <div className="bg-[#F9FAFB] rounded-2xl flex flex-col gap-1.5 items-center py-8 transition-transform duration-600 hover:scale-95 ease-in-out">
+            <div className="size-[35px] shadow bg-[#FBBC05] rounded-sm flex justify-center items-center text-white">
+              <FiUserPlus />
+            </div>
             <p className="font-bold text-[#101828] ">Install & Active</p>
             <p className="text-center w-[80%] text-[#101828]">
               our expert installation team will bring your clean energy vision
               to life
             </p>
           </div>
-          <div className="bg-[#F9FAFB] rounded-2xl flex flex-col gap-1.5 items-center py-8">
-            <div className="size-[35px] shadow bg-[#FBBC05] rounded-sm"></div>
+          <div className="bg-[#F9FAFB] rounded-2xl flex flex-col gap-1.5 items-center py-8 transition-transform duration-600 hover:scale-95 ease-in-out">
+            <div className="size-[35px] shadow bg-[#FBBC05] text-2xl rounded-sm flex justify-center items-center text-white">
+              <TiStarOutline />
+            </div>
             <p className="font-bold text-[#101828]">System Monitoring</p>
-            <p className="text-center w-[80%] text-[#101828]">
+            <p className="text-center w-[80%] text-[#101828] ">
               Utilize monitoring to track your energy production, identifying
               any potential issues immediately.
             </p>

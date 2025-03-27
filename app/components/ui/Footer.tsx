@@ -22,14 +22,18 @@ const Footer = () => {
         </div>
         <div>
           <p className="text-[#101828] font-sora">SERVICES</p>
-          <p className="text-[#293958] font-sora">Solar installation</p>
-          <p className="text-[#293958] font-sora">Consultation</p>
+          <p className="text-[#293958] font-sora cursor-pointer">
+            Solar installation
+          </p>
+          <p className="text-[#293958] font-sora cursor-pointer">
+            Consultation
+          </p>
         </div>
         <div>
           <p className="text-[#101828] font-sora">COMPANY</p>
-          <p className="text-[#293958] font-sora">About Us</p>
-          <p className="text-[#293958] font-sora">Careers</p>
-          <p className="text-[#293958] font-sora">Contact</p>
+          <p className="text-[#293958] font-sora cursor-pointer">About Us</p>
+          <p className="text-[#293958] font-sora cursor-pointer">Careers</p>
+          <p className="text-[#293958] font-sora cursor-pointer">Contact</p>
         </div>
         <div>
           <p className="text-[#101828] font-sora">STAY UPDATED</p>

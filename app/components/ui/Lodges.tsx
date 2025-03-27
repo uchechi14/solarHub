@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import image1 from "../../../public/images/image1.svg";
-import image2 from "../../../public/images/image2.svg";
-import image3 from "../../../public/images/image3.svg";
+import image1 from "../../../public/images/imag3.webp";
+import image2 from "../../../public/images/image.webp";
+import image3 from "../../../public/images/image2.webp";
 import { FaArrowRight } from "react-icons/fa";
 
 const Lodges = () => {
@@ -10,9 +10,9 @@ const Lodges = () => {
     { image: image1 },
     { image: image2 },
     { image: image3 },
-    { image: image3 },
-    { image: image3 },
-    { image: image3 },
+    { image: image2 },
+    { image: image1 },
+    { image: image2 },
     { image: image3 },
   ];
 
@@ -22,7 +22,7 @@ const Lodges = () => {
         <div className="text-white flex flex-col gap-3 text-center md:text-left">
           <h1 className="text-white text-5xl font-rage ">Solar Hub</h1>
           <p>Functional Projects</p>
-          <p className="text-4xl md:w-[40%]">
+          <p className="text-4xl md:w-[40%] font-soraBold">
             Latest Project We Recently Completed
           </p>
           <p className="text-sm md:w-[35%]">
@@ -40,11 +40,11 @@ const Lodges = () => {
           <div className="bg-[#E9ECEF] py-5 px-3 rounded-t-xl">
             <div className="grid grid-cols-1 md:grid-cols-7 ">
               {LodgesImage.map((item, index) => (
-                <div key={index} className="aspect-square w-full px-2 md:px-0">
+                <div key={index} className="aspect-square w-full px-2 md:px-0 ">
                   <Image
                     src={item.image}
                     alt="image"
-                    className="aspect-square w-full"
+                    className="aspect-square w-full transition-transform duration-600 hover:scale-95 ease-in-out"
                   />
                 </div>
               ))}
@@ -55,7 +55,7 @@ const Lodges = () => {
                   <Image
                     src={item.image}
                     alt="image"
-                    className="aspect-square w-full"
+                    className="aspect-square w-full transition-transform duration-600 hover:scale-95 ease-in-out"
                   />
                 </div>
               ))}

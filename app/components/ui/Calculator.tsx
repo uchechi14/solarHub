@@ -5,7 +5,7 @@ const Calculator = () => {
     <div className="w-full flex justify-center py-10">
       <div className="w-[90%]">
         <div className="flex flex-col items-center pb-8">
-          <p className="text-[#101828] font-sora font-bold text-3xl">
+          <p className="text-[#101828] font-soraBold text-3xl">
             Investment Calculator
           </p>
           <p className="text-[#475467] ">
@@ -50,7 +50,7 @@ const Calculator = () => {
           </form>
           <div className="text-[#101828] w-full bg-[#F3F4F5] px-6 rounded-2xl flex flex-col items-center justify-center gap-2 h-[360px]">
             <p className="font-sora text-xl">Projected Returns</p>
-            <p className="text-2xl font-bold font-sora">NGN 30,0000,000</p>
+            <p className="text-2xl font-bold font-soraBold">NGN 30,0000,000</p>
             <p className="">Total Value After 5 Years</p>
           </div>
         </div>

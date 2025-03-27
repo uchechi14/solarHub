@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import Man from "../../../public/images/man.svg";
+import Man from "../../../public/images/artivce1.webp";
+import Man1 from "../../../public/images/artivce2.webp";
+import Man2 from "../../../public/images/artivce3.webp";
 import { PiStarFourFill } from "react-icons/pi";
 
 const Article = () => {
@@ -39,7 +41,7 @@ const Article = () => {
           </div>
           <div className="flex flex-col gap-2.5">
             <div className="w-full">
-              <Image src={Man} alt="Man" className="w-full" />
+              <Image src={Man1} alt="Man" className="w-full" />
             </div>
             <p className="font-bold text-[#101828] font-sora text-lg">
               Which Solar Generator Fits Your Life? Let’s 1250 vs 1260 – And a
@@ -57,7 +59,7 @@ const Article = () => {
           </div>
           <div className="flex flex-col gap-2.5">
             <div className="w-full">
-              <Image src={Man} alt="Man" className="w-full" />
+              <Image src={Man2} alt="Man" className="w-full" />
             </div>
             <p className="font-bold text-[#101828] font-sora text-lg">
               Power Dilemma: Should You Get an Inverter or a Solar Generator?

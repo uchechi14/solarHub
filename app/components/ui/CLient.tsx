@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import girl from "../../../public/images/beautiful-happy-smiling-female-student-using-tablet-browse-internet-research-scroll-social-media-while-working-home-cheerful-young-joyful-girl-searching-web 4.svg";
+// import girl from "../../../public/images/beautiful-happy-smiling-female-student-using-tablet-browse-internet-research-scroll-social-media-while-working-home-cheerful-young-joyful-girl-searching-web 4.svg";
+import SmilingGirl from "../../../public/images/finegirl.webp";
 
 const CLient = () => {
   return (
@@ -11,26 +12,35 @@ const CLient = () => {
             Loved by‍ more than +100,000 clients.
           </p>
         </div>
-        <div className=" relative w-full">
-          <div className="w-full  rounded-2xl">
-            <Image
-              src={girl}
-              alt="girl"
-              className="w-full bg-white rounded-2xl"
-              //   bg-[url('/images/heroImage.svg')]
-            />
-          </div>
-          <div className="absolute left-0 text-white pl-9 bottom-0 pb-5 w-[50%] flex flex-col gap-2">
-            <p>
-              “I am thrilled with the solar panel installation from SolarHub!
-              From the initial consultation to the final setup, the team was
-              highly professional and knowledgeable. Thank you for your
-              exceptional service!”
-            </p>
-            <p className="text-xl">Dewan Miniquo</p>
-            <p>Individual- Mr. John</p>
+        <div className="relative w-full">
+          <div className="relative">
+            {/* Remove absolute positioning from the image container */}
+            <div className="w-full rounded-2xl">
+              <Image
+                src={SmilingGirl}
+                alt="girl"
+                className="w-full object-cover rounded-2xl absolute inset-0 h-full"
+              />
+            </div>
+
+            {/* Positioning text content */}
+            <div className="relative z-10 pt-36 pb-8 px-4">
+              {" "}
+              {/* Add padding to ensure text has space */}
+              <div className="text-white md:w-[50%] flex flex-col gap-2">
+                <p className="font-soraThin">
+                  &quot;I am thrilled with the solar panel installation from
+                  SolarHub! From the initial consultation to the final setup,
+                  the team was highly professional and knowledgeable. Thank you
+                  for your exceptional service!&quot;
+                </p>
+                <p className="text-3xl font-soraBold">Dewan Miniquo</p>
+                <p>Individual- Mr. John</p>
+              </div>
+            </div>
           </div>
         </div>
+
         <div className="flex gap-5">
           <p className="text-[#272E35] pt-2 px-4 border-t border-t-[#101828]">
             Individuals

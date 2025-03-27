@@ -43,7 +43,7 @@ const ContactUs = ({ step }: props) => {
             Our personal solar advisor are here to answer your queries and
             questions
           </p>
-          <div className="bg-[#FFFFFF] flex flex-col gap-3 rounded-2xl shadow-[0_10px_70px_rgba(0,0,0,0.25)] md:px-10 px-10 py-10">
+          <div className="bg-[#FFFFFF] flex flex-col gap-3 rounded-2xl shadow-[0_10px_70px_rgba(0,0,0,0.25)]  px-8 py-10">
             <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
               <div className="flex flex-col gap-2 w-full">
                 <p className="font-sora text-[#101828]">First name</p>
@@ -67,7 +67,7 @@ const ContactUs = ({ step }: props) => {
                 <p className="font-sora text-[#101828]">Email</p>
                 <input
                   type="text"
-                  className="w-full px-2.5 py-2 rounded-sm border border-[#EEF5FF] outline-none"
+                  className="w-full px-2.5 py-2 rounded-sm border border-[#EEF5FF] outline-none focus:border-opacity-70 border-opacity-30 transition duration-300 "
                   placeholder="e.g daniel@gmail.com"
                 />
               </div>
@@ -112,7 +112,7 @@ const ContactUs = ({ step }: props) => {
       </div>
       <div className="w-full flex justify-center py-10  bg-white">
         <div className="w-[90%] grid md:grid-cols-3 gap-5 grid-cols-1">
-          <div className="bg-[#F9FAFB] shadow-md rounded-2xl flex justify-center  items-center px-5 py-10 ">
+          <div className="bg-[#F9FAFB] shadow-md rounded-2xl flex justify-center items-center px-8 py-10 transition-transform duration-600 hover:scale-95 ease-in-out">
             <div className="flex gap-2.5 ">
               <div className="size-[35px] shadow flex-shrink-0 bg-[#FBBC05] rounded-sm flex justify-center items-center text-white text-xl">
                 <SlLocationPin />
@@ -125,7 +125,7 @@ const ContactUs = ({ step }: props) => {
               </div>
             </div>
           </div>
-          <div className="bg-[#F9FAFB] shadow-md rounded-2xl flex justify-center  items-center px-8 py-10 ">
+          <div className="bg-[#F9FAFB] shadow-md rounded-2xl flex justify-center items-center px-8 py-10 transition-transform duration-600 hover:scale-95 ease-in-out">
             <div className="flex gap-2.5 ">
               <div className="size-[35px] shadow bg-[#FBBC05] flex-shrink-0 rounded-sm flex justify-center items-center text-white text-xl">
                 <SlLocationPin />
@@ -138,7 +138,7 @@ const ContactUs = ({ step }: props) => {
               </div>
             </div>
           </div>
-          <div className="bg-[#F9FAFB] shadow-md rounded-2xl flex justify-center  items-center px-8 py-10 ">
+          <div className="bg-[#F9FAFB] shadow-md rounded-2xl flex justify-center  items-center px-8 py-10 transition-transform duration-600 hover:scale-95 ease-in-out">
             <div className="flex gap-2.5 ">
               <div className="size-[35px] shadow bg-[#FBBC05] flex-shrink-0 rounded-sm flex justify-center items-center text-white text-xl">
                 <SlLocationPin />

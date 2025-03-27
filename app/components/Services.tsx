@@ -1,5 +1,6 @@
 import React from "react";
-import workers from "../../public/images/construction.svg";
+import workers from "../../public/images/inst2.jpg.webp";
+import workers1 from "../../public/images/inst1.jpg.webp";
 import Image from "next/image";
 import WorkingSteps from "../components/ui/WorkingSteps";
 import Hotels from "../components/Hotels";
@@ -23,7 +24,7 @@ const Services = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2  grid-cols-1 gap-10 ">
-            <div className="border border-[#CFD6DD] flex flex-col gap-2 pb-5 rounded-2xl">
+            <div className="border border-[#CFD6DD] flex flex-col gap-2 pb-5 rounded-2xl  transition-transform duration-600 hover:scale-95 ease-in-out">
               <div className="w-full ">
                 <Image
                   src={workers}
@@ -44,10 +45,10 @@ const Services = () => {
                 </button>
               </div>
             </div>
-            <div className="border border-[#CFD6DD] flex flex-col gap-2 pb-5 rounded-2xl">
+            <div className="border border-[#CFD6DD] flex flex-col gap-2 pb-5 rounded-2xl  transition-transform duration-600 hover:scale-95 ease-in-out">
               <div className="w-full ">
                 <Image
-                  src={workers}
+                  src={workers1}
                   alt="workers"
                   className="w-full rounded-t-2xl"
                 />

@@ -12,7 +12,7 @@ const Header = () => {
     { name: " HOME", href: "/" },
     { name: "ABOUT US", href: "/aboutUs" },
     { name: " SERVICES", href: "/serve" },
-    { name: " OUR NEWS", href: "/contact" },
+    { name: " CONTACT US", href: "/contact" },
   ];
 
   const [sideOpen, setSideOpen] = useState<boolean>(false);
@@ -60,11 +60,11 @@ const Header = () => {
               key={index}
               className={`${
                 pathname === item.href ? "text-[#101828]" : "text-[#10182899]"
-              }  font-semibold  font-sora  text-shadow text-shadow-2xl text-sm  pb-2 `}
+              }  font-semibold  font-sora  text-shadow text-shadow-2xl text-sm hover:text-[#101828] transition duration-600 ease-in-out `}
             >
               <Link href={item.href}>{item.name}</Link>
               <p
-                className={`w-[50%] pt-2 ${
+                className={`w-[50%] mt-2 ${
                   pathname === item.href ? "border-b-2 border-b-[#101828]" : ""
                 } `}
               ></p>
@@ -72,9 +72,6 @@ const Header = () => {
           ))}
         </nav>
         <div className="lg:flex hidden items-center gap-3">
-          <button className="text-[#101828] font-sora  text-sm">
-            CONTACT US
-          </button>
           <button className="bg-[#101828] text-white py-2.5 px-[1.5rem] text-sm rounded-sm ">
             GET STARTED
           </button>
@@ -135,9 +132,6 @@ const Header = () => {
                 ))}
               </nav>
               <div className="flex md:hidden flex-col items-start md:items-center gap-5">
-                <button className="text-[#101828] font-sora  text-sm">
-                  CONTACT US
-                </button>
                 <button className="bg-[#101828] text-white shadow-2xl py-2.5 px-[1.5rem] text-sm rounded-sm ">
                   GET STARTED
                 </button>

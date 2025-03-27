@@ -5,7 +5,7 @@ const Power = () => {
   return (
     <div className="w-full flex justify-center py-10">
       <div className="w-[90%] flex flex-col items-center gap-3 ">
-        <p className="font-semibold font-sora text-[#101828] text-4xl md:text-5xl text-center">
+        <p className=" font-soraBold text-[#101828] text-4xl md:text-5xl text-center">
           Get unique power
         </p>
         <p className="text-[#101828] text-xl text-center md:w-[30%]">
