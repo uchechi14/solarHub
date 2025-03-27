@@ -1,10 +1,11 @@
 import React from "react";
 // import { BsBarChart } from "react-icons/bs";
 import { FaArrowRight } from "react-icons/fa";
-import { MdOutlineCancel } from "react-icons/md";
+import { MdOutlineCancel, MdOutlineMail } from "react-icons/md";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { SlLocationPin } from "react-icons/sl";
 import Power from "./ui/Power";
+import { FiPhone } from "react-icons/fi";
 
 type props = {
   step: number;
@@ -128,26 +129,24 @@ const ContactUs = ({ step }: props) => {
           <div className="bg-[#F9FAFB] shadow-md rounded-2xl flex justify-center items-center px-8 py-10 transition-transform duration-600 hover:scale-95 ease-in-out">
             <div className="flex gap-2.5 ">
               <div className="size-[35px] shadow bg-[#FBBC05] flex-shrink-0 rounded-sm flex justify-center items-center text-white text-xl">
-                <SlLocationPin />
+                <MdOutlineMail />
               </div>
               <div>
-                <p className="font-bold text-[#101828] font-sora">Address</p>
+                <p className="font-bold text-[#101828] font-sora">Email</p>
                 <p className="font-sora">
-                  No. 89 Chikakore Estate, Kubwa Abuja.
+                  info@solarhub.com contact@solarhub.com
                 </p>
               </div>
             </div>
           </div>
           <div className="bg-[#F9FAFB] shadow-md rounded-2xl flex justify-center  items-center px-8 py-10 transition-transform duration-600 hover:scale-95 ease-in-out">
-            <div className="flex gap-2.5 ">
+            <div className="flex gap-2.5  ">
               <div className="size-[35px] shadow bg-[#FBBC05] flex-shrink-0 rounded-sm flex justify-center items-center text-white text-xl">
-                <SlLocationPin />
+                <FiPhone />
               </div>
               <div>
-                <p className="font-bold text-[#101828] font-sora">Address</p>
-                <p className="font-sora">
-                  No. 89 Chikakore Estate, Kubwa Abuja.
-                </p>
+                <p className="font-bold text-[#101828] font-sora">Phone</p>
+                <p className="font-sora">Enquiries: 08082428134</p>
               </div>
             </div>
           </div>
@@ -156,7 +155,9 @@ const ContactUs = ({ step }: props) => {
       <div className="w-full flex justify-center py-10">
         <div className="w-[90%]">
           <div>
-            <p className="text-[#101828] text-2xl">Book a free demo</p>
+            <p className="text-[#101828] text-2xl font-soraBold">
+              Book a free demo
+            </p>
             <p className="text-[#101828] font-sora text-sm">
               Experience firsthand how Solarhub works– secure your spot today!
             </p>

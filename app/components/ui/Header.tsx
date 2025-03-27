@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-// import React, { useEffect, useState } from "react";
 
 import { IoMenu } from "react-icons/io5";
 
@@ -26,28 +25,12 @@ const Header = () => {
     }, 10);
   };
 
-  // useEffect(() => {
-  //   setstart_anime(true);
-  // }, 10);
-
   const handle_close = () => {
     setstart_anime(false);
     setTimeout(() => {
       setSideOpen(false);
     }, 400);
   };
-
-  // const [start_anime, setstart_anime] = useState(false);
-  // useEffect(() => {
-  //   setstart_anime(true);
-  // }, []);
-
-  // const handle_close = () => {
-  //   setstart_anime(false);
-  //   setTimeout(() => {
-  //     setSideOpen(false);
-  //   }, 400);
-  // };
 
   return (
     <div className="w-full bg-white h-20  flex items-center justify-center ">
@@ -87,10 +70,7 @@ const Header = () => {
           style={{
             transition: "0.4s linear",
           }}
-          // className={`  ${
-          //   start_anime ? "bg-opacity-70" : "bg-opacity-0"
-          // } fixed top-0 left-0 h-[100vh] bg-red-300 w-full z-[10] lg:hidden`}
-          className={`h-[100vh] left-0 fixed  top-0 w-full z-[1000] flex md:hidden bg-[#10182833] ${
+          className={`h-[100vh] left-0 fixed  top-0 w-full z-[1000] flex lg:hidden bg-[#06080e65] ${
             start_anime ? "bg-opacity-70" : "bg-opacity-0"
           }`}
         >
@@ -101,16 +81,13 @@ const Header = () => {
             style={{
               transition: "0.4s linear",
             }}
-            // className={`fixed top-0 w-[80%] h-full left-0 bg-white  shadow-lg ease-in-out z-50 ${
-            //   start_anime ? "translate-x-0" : "-translate-x-full"
-            // }`}
-            className={`h-full left-0 w-[70%] flex md:hidden fixed top-0
+            className={`h-full left-0 w-[70%] flex lg:hidden fixed top-0
                 bg-white shadow-lg ease-in-out z-50  ${
                   start_anime ? "translate-x-0" : "-translate-x-full"
                 }`}
           >
             <div className="px-7 pt-9 flex gap-5 flex-col">
-              <nav className="md:hidden gap-6 flex flex-col">
+              <nav className="lg:hidden gap-6 flex flex-col">
                 {navItems.map((item, index) => (
                   <p
                     key={index}
@@ -131,7 +108,7 @@ const Header = () => {
                   </p>
                 ))}
               </nav>
-              <div className="flex md:hidden flex-col items-start md:items-center gap-5">
+              <div className="flex lg:hidden flex-col items-start md:items-center gap-5">
                 <button className="bg-[#101828] text-white shadow-2xl py-2.5 px-[1.5rem] text-sm rounded-sm ">
                   GET STARTED
                 </button>
