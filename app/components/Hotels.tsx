@@ -3,6 +3,7 @@ import chair from "../../public/images/solar-panels-meadow 2.webp";
 import chair2 from "../../public/images/solar-panels-meadow 2 (1).webp";
 // import chair3 from "../../public/images/solar-panels-meadow 2 (1) (1).webp";
 import Image from "next/image";
+import TextAnimation from "./ui/TextAnimation";
 
 const Hotels = () => {
   const ImageItem = [
@@ -28,16 +29,18 @@ const Hotels = () => {
   return (
     <div className="w-full flex justify-center py-10">
       <div className="w-[90%]">
-        <div className="flex md:justify-between flex-col md:flex-row gap-3 py-9">
-          <p className="text-4xl text-[#101828] font-soraBold w-full text-center md:text-left">
-            Who are we for?
-          </p>
-          <p className="text-[#676767] w-full md:w-[70%] text-center md:text-left">
-            A leading solar renewable energy company-that aims to power various
-            categories of building such as: Hotels, lodges, mini estates,
-            industries. e.t.c
-          </p>
-        </div>
+        <TextAnimation>
+          <div className="flex md:justify-between flex-col md:flex-row gap-3 py-9">
+            <p className="text-4xl text-[#101828] font-soraBold w-full text-center md:text-left">
+              Who are we for?
+            </p>
+            <p className="text-[#676767] w-full md:w-[70%] text-center md:text-left">
+              A leading solar renewable energy company-that aims to power
+              various categories of building such as: Hotels, lodges, mini
+              estates, industries. e.t.c
+            </p>
+          </div>
+        </TextAnimation>
         <div className="grid md:grid-cols-3 grid-cols-1 gap-5 w-full">
           {ImageItem.map((items, index) => (
             <div

@@ -6,14 +6,14 @@ import { TiStarOutline } from "react-icons/ti";
 
 const WorkingSteps = () => {
   return (
-    <div className="pb-10 md:mt-28 mt-20">
+    <div className="pb-10 ">
       <div className="w-full flex justify-center py-10">
         <div className="w-[90%] grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="flex flex-col items-center">
             <p className="text-3xl font-bold font-soraBold text-[#101828]">
               250+
             </p>
-            <p className="font-sora text-[#101828] text-sm">
+            <p className="font-sora text-[#101828] text-sm text-center">
               Completed Projects
             </p>
           </div>
@@ -21,19 +21,25 @@ const WorkingSteps = () => {
             <p className="text-3xl font-bold font-soraBold text-[#101828]">
               500+
             </p>
-            <p className="font-sora text-[#101828] text-sm">Installed Panels</p>
+            <p className="font-sora text-[#101828] text-sm text-center">
+              Installed Panels
+            </p>
           </div>
           <div className="flex flex-col items-center">
             <p className="text-3xl font-bold font-soraBold text-[#101828]">
               1000+
             </p>
-            <p className="font-sora text-[#101828] text-sm">Solar Setup</p>
+            <p className="font-sora text-[#101828] text-sm text-center">
+              Solar Setup
+            </p>
           </div>
           <div className="flex flex-col items-center">
             <p className="text-3xl font-bold font-soraBold text-[#101828]">
               100+
             </p>
-            <p className="font-sora text-[#101828] text-sm">Monitoring Solar</p>
+            <p className="font-sora text-[#101828] text-sm text-center">
+              Monitoring Solar
+            </p>
           </div>
         </div>
       </div>

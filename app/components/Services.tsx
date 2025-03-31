@@ -7,22 +7,25 @@ import Hotels from "../components/Hotels";
 import Lodges from "../components/ui/Lodges";
 import Calculator from "../components/ui/Calculator";
 import Power from "../components/ui/Power";
+import TextAnimation from "./ui/TextAnimation";
 
 const Services = () => {
   return (
     <div>
       <div className="w-full flex justify-center py-10 md:bg-[#FAFAFA] bg-white">
         <div className="w-[90%] flex flex-col gap-4">
-          <div className="flex md:justify-between flex-col md:flex-row ">
-            <p className="text-4xl text-[#101828] w-full text-center md:text-left">
-              Our Services
-            </p>
-            <p className="text-[#676767] w-full md:w-[70%] text-center md:text-left">
-              We are the First Privately owned Solar installation company in
-              Nigeria. We have all resources required to complete any size of
-              project anywhere in Nigeria
-            </p>
-          </div>
+          <TextAnimation>
+            <div className="flex md:justify-between flex-col md:flex-row ">
+              <p className="text-4xl font-soraBold text-[#101828] w-full text-center md:text-left">
+                Our Services
+              </p>
+              <p className="text-[#676767] w-full md:w-[70%] text-center md:text-left">
+                We are the First Privately owned Solar installation company in
+                Nigeria. We have all resources required to complete any size of
+                project anywhere in Nigeria
+              </p>
+            </div>
+          </TextAnimation>
           <div className="grid md:grid-cols-2  grid-cols-1 gap-10 ">
             <div className="border border-[#CFD6DD] flex flex-col gap-2 pb-5 rounded-2xl  transition-transform duration-600 hover:scale-95 ease-in-out">
               <div className="w-full ">

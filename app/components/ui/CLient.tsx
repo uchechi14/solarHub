@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 // import girl from "../../../public/images/beautiful-happy-smiling-female-student-using-tablet-browse-internet-research-scroll-social-media-while-working-home-cheerful-young-joyful-girl-searching-web 4.svg";
 import SmilingGirl from "../../../public/images/finegirl.webp";
+import TextAnimation from "./TextAnimation";
 
 const CLient = () => {
   return (
@@ -27,16 +28,18 @@ const CLient = () => {
             <div className="relative z-10 pt-36 pb-8 px-4">
               {" "}
               {/* Add padding to ensure text has space */}
-              <div className="text-white md:w-[50%] flex flex-col gap-2">
-                <p className="font-soraThin">
-                  &quot;I am thrilled with the solar panel installation from
-                  SolarHub! From the initial consultation to the final setup,
-                  the team was highly professional and knowledgeable. Thank you
-                  for your exceptional service!&quot;
-                </p>
-                <p className="text-3xl font-soraBold">Dewan Miniquo</p>
-                <p>Individual- Mr. John</p>
-              </div>
+              <TextAnimation>
+                <div className="text-white md:w-[50%] flex flex-col gap-2">
+                  <p className="font-soraThin">
+                    &quot;I am thrilled with the solar panel installation from
+                    SolarHub! From the initial consultation to the final setup,
+                    the team was highly professional and knowledgeable. Thank
+                    you for your exceptional service!&quot;
+                  </p>
+                  <p className="text-3xl font-soraBold">Dewan Miniquo</p>
+                  <p>Individual- Mr. John</p>
+                </div>
+              </TextAnimation>
             </div>
           </div>
         </div>

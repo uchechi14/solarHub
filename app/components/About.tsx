@@ -10,8 +10,10 @@ import Team2 from "../../public/images/gadus2.webp";
 import Team3 from "../../public/images/gadus3.webp";
 import woman from "../../public/images/happyblackwoman.webp";
 import CLient from "./ui/CLient";
+import SlideInTextAnimation from "./ui/SlideInTextAnimation";
 // import Power from "./ui/Power";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import TextAnimation from "./ui/TextAnimation";
 
 const About = () => {
   return (
@@ -20,8 +22,7 @@ const About = () => {
         <div className="w-[85%] flex flex-col md:flex-row gap-4">
           <div className="w-full relative flex flex-col gap-5 items-center md:items-start">
             <p className="font-soraBold text-4xl text-center md:text-left">
-              SolarHub is a well-known provider of solar renewable energy based
-              in Nigeria.
+              <SlideInTextAnimation text=" SolarHub is a well-known provider of solar renewable energy based in Nigeria." />
             </p>
             <p className="font-soraThin text-center md:text-left">
               Our vision is to be the leading force in Nigeria&apos;s transition
@@ -95,14 +96,16 @@ const About = () => {
       </div>
       <div className="w-full flex justify-center py-10">
         <div className="w-[90%] flex flex-col gap-5">
-          <div className="flex justify-between flex-col md:flex-row gap-5">
-            <p className="text-3xl font-sora text-#101828 text-center md:text-left">
-              Meet Our Core Team!
-            </p>
-            <p className="text-[#0D141F] font-sora text-center md:text-left">
-              With more than 200 members worldwide, we are a growing team.
-            </p>
-          </div>
+          <TextAnimation>
+            <div className="flex justify-between flex-col md:flex-row gap-5">
+              <p className="text-3xl font-sora text-#101828 text-center md:text-left">
+                Meet Our Core Team!
+              </p>
+              <p className="text-[#0D141F] font-sora text-center md:text-left">
+                With more than 200 members worldwide, we are a growing team.
+              </p>
+            </div>
+          </TextAnimation>
           <div className=" grid grid-cols-1 sm:grid-cols-2 gap-5 md:grid-cols-3 justify-center">
             <div className="flex flex-col gap-1 items-center ">
               <Image
@@ -143,7 +146,7 @@ const About = () => {
               Get in Touch
             </p>
             <p className="font-sora text-4xl text-center md:text-left">
-              Speak with our solar experts
+              <SlideInTextAnimation text="Speak with our solar experts" />
             </p>
             <div>
               <button className="bg-[#101828] text-white border-[1px] flex items-center gap-1 py-2.5 px-[1.5rem] text-sm rounded-sm ">
@@ -234,63 +237,78 @@ const MOVEMENT_BOUNDS = {
   maxY: 100,
 };
 
-const ResponsiveMapPoints = () => {
-  const [locations, setLocations] = useState([
-    {
-      id: 1,
-      x: "35%",
-      y: "60%",
-      color: "bg-[#1FA713]",
-      personalRange: { x: 5, y: 5 },
-    },
-    {
-      id: 2,
-      x: "15%",
-      y: "55%",
-      color: "bg-[#1FA713]",
-      personalRange: { x: 5, y: 5 },
-    },
-    {
-      id: 3,
-      x: "18%",
-      y: "68%",
-      color: "bg-[#1FA713]",
-      personalRange: { x: 5, y: 5 },
-    },
-    {
-      id: 4,
-      x: "25%",
-      y: "55%",
-      color: "bg-[#1FA713]",
-      personalRange: { x: 5, y: 5 },
-    },
-    {
-      id: 5,
-      x: "32%",
-      y: "52%",
-      color: "bg-[#1FA713]",
-      personalRange: { x: 5, y: 5 },
-    },
-    {
-      id: 6,
-      x: "20%",
-      y: "59%",
-      color: "bg-[#1FA713]",
-      personalRange: { x: 5, y: 5 },
-    },
-    {
-      id: 7,
-      x: "20%",
-      y: "69%",
-      color: "bg-[#1FA713]",
-      personalRange: { x: 5, y: 5 },
-    },
-  ]);
+// Define different dot types
+const DOT_TYPES = {
+  SLOW: "slow",
+  MEDIUM: "medium",
+  FAST: "fast",
+  ERRATIC: "erratic",
+};
 
+const ResponsiveMapPoints = () => {
+  // Generate 20 random locations with different movement patterns
+  const generateLocations = () => {
+    const locations = [];
+    const movementTypes = [
+      DOT_TYPES.SLOW,
+      DOT_TYPES.MEDIUM,
+      DOT_TYPES.FAST,
+      DOT_TYPES.ERRATIC,
+    ];
+
+    for (let i = 1; i <= 30; i++) {
+      const randomX = Math.random() * 80 + 10; // 10% to 90%
+      const randomY = Math.random() * 80 + 10; // 10% to 90%
+      const movementType =
+        movementTypes[Math.floor(Math.random() * movementTypes.length)];
+
+      // Determine speed and movement range based on type
+      let speed, range;
+      switch (movementType) {
+        case DOT_TYPES.SLOW:
+          speed = 5000 + Math.random() * 5000; // 5-7 seconds
+          range = { x: 3, y: 3 };
+          break;
+        case DOT_TYPES.MEDIUM:
+          speed = 3000 + Math.random() * 5000; // 3-4 seconds
+          range = { x: 5, y: 5 };
+          break;
+        case DOT_TYPES.FAST:
+          speed = 1500 + Math.random() * 500; // 1.5-2 seconds
+          range = { x: 8, y: 8 };
+          break;
+        case DOT_TYPES.ERRATIC:
+          speed = 2000 + Math.random() * 1000; // 2-3 seconds
+          range = { x: 12, y: 12 };
+          break;
+      }
+
+      type Position = { x: number; y: number };
+      locations.push({
+        id: i,
+        x: `${randomX}%`,
+        y: `${randomY}%`,
+        color: "bg-green-500", // All dots are green
+        movementType,
+        speed,
+        range,
+        size: movementType === DOT_TYPES.FAST ? "w-2 h-2" : "w-3 h-3",
+        // Give fast dots a trail effect
+        hasTrail:
+          movementType === DOT_TYPES.FAST || movementType === DOT_TYPES.ERRATIC,
+        lastPositions: [] as Position[],
+      });
+    }
+
+    return locations;
+  };
+
+  const [locations, setLocations] = useState(generateLocations);
   const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
   const imageRef = useRef<HTMLImageElement>(null);
+  console.log(imageSize);
 
-  // Update image size
+  // Update image size whenever it changes
   useEffect(() => {
     const updateImageSize = () => {
       if (imageRef.current) {
@@ -301,43 +319,81 @@ const ResponsiveMapPoints = () => {
       }
     };
 
+    // Initial size update
     updateImageSize();
+
+    // Update on window resize
     window.addEventListener("resize", updateImageSize);
+
+    // Update when image loads
+    if (imageRef.current) {
+      imageRef.current.onload = updateImageSize;
+    }
+
     return () => window.removeEventListener("resize", updateImageSize);
   }, []);
 
-  // Movement within bounds
+  // Movement logic - each dot moves independently
   useEffect(() => {
-    const moveLocations = () => {
-      setLocations((prevLocations) =>
-        prevLocations.map((location) => {
-          const currentX = parseFloat(location.x);
-          const currentY = parseFloat(location.y);
+    const moveIntervals = locations.map((location) => {
+      const moveLocation = () => {
+        setLocations((prevLocations) => {
+          return prevLocations.map((loc) => {
+            if (loc.id !== location.id) return loc;
 
-          const randomX = currentX + (Math.random() * 4 - 2); // move +/-2%
-          const randomY = currentY + (Math.random() * 4 - 2);
+            const currentX = parseFloat(loc.x);
+            const currentY = parseFloat(loc.y);
 
-          const clampedX = Math.min(
-            Math.max(randomX, MOVEMENT_BOUNDS.minX),
-            MOVEMENT_BOUNDS.maxX
-          );
-          const clampedY = Math.min(
-            Math.max(randomY, MOVEMENT_BOUNDS.minY),
-            MOVEMENT_BOUNDS.maxY
-          );
+            // Movement range varies by type
+            const moveFactor =
+              loc.movementType === DOT_TYPES.ERRATIC
+                ? Math.random() > 0.7
+                  ? 3
+                  : 1
+                : 1; // Erratic dots occasionally make bigger jumps
 
-          return {
-            ...location,
-            x: `${clampedX}%`,
-            y: `${clampedY}%`,
-          };
-        })
-      );
-    };
+            const randomX =
+              currentX +
+              (Math.random() * (loc.range?.x ?? 5) * 2 - (loc.range?.x ?? 5)) *
+                moveFactor;
+            const randomY =
+              currentY +
+              (Math.random() * (loc.range?.y ?? 5) * 2 - (loc.range?.y ?? 5)) *
+                moveFactor;
 
-    const intervalId = setInterval(moveLocations, 4000);
-    return () => clearInterval(intervalId);
-  }, [imageSize]);
+            const clampedX = Math.min(
+              Math.max(randomX, MOVEMENT_BOUNDS.minX),
+              MOVEMENT_BOUNDS.maxX
+            );
+            const clampedY = Math.min(
+              Math.max(randomY, MOVEMENT_BOUNDS.minY),
+              MOVEMENT_BOUNDS.maxY
+            );
+
+            // Store position history for trail effect
+            let newLastPositions = loc.lastPositions || [];
+            if (loc.hasTrail) {
+              newLastPositions = [
+                { x: currentX, y: currentY },
+                ...newLastPositions.slice(0, 4),
+              ];
+            }
+
+            return {
+              ...loc,
+              x: `${clampedX}%`,
+              y: `${clampedY}%`,
+              lastPositions: newLastPositions,
+            };
+          });
+        });
+      };
+
+      return setInterval(moveLocation, location.speed);
+    });
+
+    return () => moveIntervals.forEach((interval) => clearInterval(interval));
+  }, []);
 
   return (
     <div className="w-full relative">
@@ -350,17 +406,42 @@ const ResponsiveMapPoints = () => {
         />
 
         {/* Points Container */}
-        <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 pointer-events-none size-[70%] left-10  top-10">
           {locations.map((point) => (
-            <div
-              key={point.id}
-              className={`absolute w-4 h-4 rounded-full ${point.color}`}
-              style={{
-                left: point.x,
-                top: point.y,
-                transition: "all 0.5s ease",
-              }}
-            ></div>
+            <React.Fragment key={point.id}>
+              {/* Trailing effect for fast dots */}
+              {point.hasTrail &&
+                point.lastPositions &&
+                point.lastPositions.map((pos, i) => (
+                  <div
+                    key={`trail-${point.id}-${i}`}
+                    className={`absolute rounded-full ${point.color} opacity-${
+                      30 - i * 6
+                    }`}
+                    style={{
+                      left: `${pos.x}%`,
+                      top: `${pos.y}%`,
+                      width: i === 0 ? "3px" : `${3 - i * 0.5}px`,
+                      height: i === 0 ? "3px" : `${3 - i * 0.5}px`,
+                    }}
+                  ></div>
+                ))}
+
+              {/* Main dot */}
+              <div
+                key={point.id}
+                className={`absolute rounded-full ${point.color} ${point.size}`}
+                style={{
+                  left: point.x,
+                  top: point.y,
+                  transition: `all ${
+                    point.movementType === DOT_TYPES.ERRATIC ? "0.3s" : "0.5s"
+                  } ${
+                    point.movementType === DOT_TYPES.ERRATIC ? "linear" : "ease"
+                  }`,
+                }}
+              ></div>
+            </React.Fragment>
           ))}
         </div>
       </div>

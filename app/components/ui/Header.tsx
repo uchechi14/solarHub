@@ -39,7 +39,7 @@ const Header = () => {
 
         <nav className="lg:flex gap-[2.5rem] hidden">
           {navItems.map((item, index) => (
-            <p
+            <div
               key={index}
               className={`${
                 pathname === item.href ? "text-[#101828]" : "text-[#10182899]"
@@ -51,7 +51,7 @@ const Header = () => {
                   pathname === item.href ? "border-b-2 border-b-[#101828]" : ""
                 } `}
               ></p>
-            </p>
+            </div>
           ))}
         </nav>
         <div className="lg:flex hidden items-center gap-3">
@@ -95,11 +95,11 @@ const Header = () => {
                       pathname === item.href
                         ? "text-[#101828]"
                         : "text-[#10182899]"
-                    }  font-semibold  font-sora  text-shadow text-shadow-2xl text-sm  pb-2 `}
+                    }  font-semibold  font-sora  text-shadow text-shadow-2xl text-sm hover:text-[#101828] transition duration-600 ease-in-out `}
                   >
                     <Link href={item.href}>{item.name}</Link>
                     <p
-                      className={`w-[50%] pt-2 ${
+                      className={`w-[50%] mt-2 ${
                         pathname === item.href
                           ? "border-b-2 border-b-[#101828]"
                           : ""

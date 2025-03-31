@@ -1,6 +1,4 @@
 "use client";
-import React, { useState } from "react";
-// import Header from "./ui/Header";
 import WorkingSteps from "./ui/WorkingSteps";
 import Image from "next/image";
 import vector from "../../public/images/Vector.webp";
@@ -10,12 +8,13 @@ import Calculator from "./ui/Calculator";
 import Article from "./ui/Article";
 import CLient from "./ui/CLient";
 import Power from "./ui/Power";
-// import Footer from "./ui/Footer";
 import Hotels from "./Hotels";
 import { FaArrowRight } from "react-icons/fa";
 import heroImage from "../../public/images/heroImage.webp";
 import { PiStarFourFill } from "react-icons/pi";
-// import { rage } from "./utils/Font";
+import { useState } from "react";
+import TextAnimation from "./ui/TextAnimation";
+import SlideInTextAnimation from "./ui/SlideInTextAnimation";
 
 const LandingPage = () => {
   const [activeTab, setActiveTab] = useState<string>("FullSolar");
@@ -37,37 +36,9 @@ const LandingPage = () => {
 
   return (
     <div>
-      {/* <div className="w-full  flex justify-center  h-[88vh] max-h-1/5  items-center">
-        <div className=" flex relative">
-          <div className=" flex flex-col gap-5">
-            <div className="w-[50%]">
-              <p className="bg-white  opacity-25 text-[#101828] text-sm py-2.5 px-5 font-sora rounded-full">
-                AT SOLARHUB
-              </p>
-            </div>
-            <p className="font-sora text-4xl font-bold text-white">
-              Power Your Future with Solar Investment
-            </p>
-            <p className="font-sora text-white">
-              Transform your property into a sustainable powerhouse. Join our
-              mission to create a greener future while earning attractive
-              returns on your investment.
-            </p>
-            <div>
-              <button className="bg-[#101828] text-white border-[1px] flex items-center gap-1 border-white py-2.5 px-[1.5rem] text-sm rounded-sm ">
-                Get Started <FaArrowRight />
-              </button>
-            </div>
-          </div>
-          <div className=" absolute left-0 top-0">
-            <Image src={heroImage} alt="heroImage" />
-          </div>
-        </div>
-      </div> */}
-
       <div className="w-full relative ">
-        <div className="relative">
-          <div className="absolute h-[88vh]   inset-0  z-0">
+        <div className="relative h-[88vh]">
+          <div className="absolute  inset-0  z-0">
             <Image
               src={heroImage}
               alt="heroImage"
@@ -84,7 +55,7 @@ const LandingPage = () => {
                   </p>
                 </div>
                 <p className="font-soraBold text-4xl font-bold text-white">
-                  Power Your Future with Solar Investment
+                  <SlideInTextAnimation text=" Power Your Future with Solar Investment" />
                 </p>
                 <p className="font-sora text-white">
                   Transform your property into a sustainable powerhouse. Join
@@ -105,16 +76,18 @@ const LandingPage = () => {
       <WorkingSteps />
       <div className="w-full flex justify-center py-10 md:bg-[#FAFAFA] bg-white">
         <div className="w-[90%] flex flex-col gap-4">
-          <div className="flex md:justify-between flex-col md:flex-row  gap-2">
-            <p className="text-4xl text-[#101828] font-sora w-full text-center md:text-left">
-              Our Services
-            </p>
-            <p className="text-[#676767] w-full md:w-[70%] text-center md:text-left">
-              We are the First Privately owned Solar installation company in
-              Nigeria. We have all resources required to complete any size of
-              project anywhere in Nigeria
-            </p>
-          </div>
+          <TextAnimation>
+            <div className="flex md:justify-between flex-col md:flex-row w-full gap-2">
+              <p className="text-4xl text-[#101828] font-sora w-full text-center md:text-left">
+                Our Services
+              </p>
+              <p className="text-[#676767] w-full md:w-[70%] text-center md:text-left">
+                We are the First Privately owned Solar installation company in
+                Nigeria. We have all resources required to complete any size of
+                project anywhere in Nigeria
+              </p>
+            </div>
+          </TextAnimation>
 
           <div className="">
             <div className="flex flex-col-reverse md:flex-row items-center md:justify-between gap-5 mt-3">
