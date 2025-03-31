@@ -143,10 +143,10 @@ const About = () => {
         <div className="w-[90%] flex justify-between items-center flex-col md:flex-row gap-5">
           <div className="flex flex-col gap-3.5 items-center md:items-start">
             <p className="font-sora text-[#181D4E] text-xl text-center md:text-left">
-              Get in Touch
+              <TextAnimation> Get in Touch</TextAnimation>
             </p>
             <p className="font-sora text-4xl text-center md:text-left">
-              <SlideInTextAnimation text="Speak with our solar experts" />
+              <TextAnimation>Speak with our solar experts</TextAnimation>
             </p>
             <div>
               <button className="bg-[#101828] text-white border-[1px] flex items-center gap-1 py-2.5 px-[1.5rem] text-sm rounded-sm ">
